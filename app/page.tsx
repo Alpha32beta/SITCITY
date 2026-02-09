@@ -3,7 +3,6 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Navigation */}
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50">
         <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-full px-8 py-4 flex items-center gap-8">
           <a href="#home" className="text-sm font-light hover:text-white/60 transition-colors">Home</a>
@@ -14,7 +13,6 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Contact Button - Top Right */}
       <div className="fixed top-8 right-8 z-50">
         <button className="bg-white text-black px-6 py-3 rounded-full flex items-center gap-2 hover:bg-white/90 transition-all hover:scale-105">
           <span className="text-sm font-medium">Contact Us</span>
@@ -49,42 +47,36 @@ export default function Home() {
               </h2>
             </div>
 
-            {/* Chair Gallery */}
             <div className="flex gap-4 pt-8">
               <div className="w-32 h-32 rounded-2xl overflow-hidden bg-zinc-900 hover:scale-105 transition-transform cursor-pointer">
                 <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
-                  <span className="text-xs text-zinc-600">Chair 1</span>
+                  <img src="/chairs for sale (1).svg" alt="" />
                 </div>
               </div>
               <div className="w-32 h-32 rounded-2xl overflow-hidden bg-zinc-900 hover:scale-105 transition-transform cursor-pointer">
-                <div className="w-full h-full bg-gradient-to-br from-blue-900 to-blue-800 flex items-center justify-center">
-                  <span className="text-xs text-blue-400">Chair 2</span>
-                </div>
+                <img src="/chairs for sale (2).svg" alt="" />
               </div>
               <div className="w-32 h-32 rounded-2xl overflow-hidden bg-zinc-900 hover:scale-105 transition-transform cursor-pointer">
-                <div className="w-full h-full bg-gradient-to-br from-zinc-700 to-zinc-800 flex items-center justify-center">
-                  <span className="text-xs text-zinc-500">Chair 3</span>
-                </div>
+               <img src="/chairs for sale (3).svg" alt="" />
               </div>
             </div>
 
-            {/* Description */}
+         
             <p className="text-zinc-400 text-base font-light max-w-md leading-relaxed pt-4">
               Our chairs are well crafter to suit any space, crafter and sculpted to your desired taste that will effortlessly fit your space.
             </p>
           </div>
 
-          {/* Right Content - Hero Image */}
+        
           <div className="relative">
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-stone-300 to-stone-400 shadow-2xl">
-              <div className="w-full h-full flex items-center justify-center text-stone-600">
-                {/* Replace with actual chair image */}
-                <img src="/chairs for sale (1).svg" alt="" />
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br">
+              <div className="w-full h-full flex items-center justify-center">
+                <img src="/Frame 47.svg" alt="" />
                 
               </div>
             </div>
             
-            {/* Decorative plant shadow */}
+           
             <div className="absolute top-0 left-0 w-32 h-32 opacity-30 pointer-events-none">
               <div className="w-full h-full bg-gradient-to-br from-green-900/30 to-transparent blur-xl"></div>
             </div>
@@ -98,11 +90,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-stone-200 to-stone-300">
-                <div className="w-full h-full flex items-center justify-center text-stone-600">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br">
+                <div className="w-full h-full flex items-center justify-center">
                   <div className="text-center">
-                    <p className="text-sm mb-2">Living Room Setup</p>
-                    <p className="text-xs opacity-50">Replace with your image</p>
+                    <img src="/Property 1=frame 48.svg" alt="" />
                   </div>
                 </div>
               </div>
@@ -118,7 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Showcase Section */}
+    
       <section className="py-32">
         <div className="container mx-auto px-8 lg:px-16">
           <div className="text-center mb-16">
@@ -126,7 +117,7 @@ export default function Home() {
             <h3 className="text-5xl font-light">CURATED SELECTION</h3>
           </div>
 
-          {/* Product Grid */}
+          
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map((item) => (
               <div key={item} className="group cursor-pointer">
@@ -143,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      
       <section className="py-20 bg-zinc-950">
         <div className="container mx-auto px-8 lg:px-16">
           <div className="text-center mb-16">
@@ -169,7 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+     
       <section className="py-32">
         <div className="container mx-auto px-8 lg:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -187,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
+     
       <section className="py-20 bg-zinc-950">
         <div className="container mx-auto px-8 lg:px-16">
           <div className="max-w-4xl mx-auto">
