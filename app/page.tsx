@@ -1,5 +1,13 @@
 import Image from 'next/image';
 
+
+     const galleryImages = [
+  '/chairs for sale.svg',
+  '/chairs for sale (1).svg',
+  '/chairs for sale (2).svg',
+  '/chairs for sale (3).svg',
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
@@ -109,6 +117,10 @@ export default function Home() {
         </div>
       </section>
 
+      <section className = "items-center justify-center flex py-20 shrink-0">
+        <img src="/expand chair.svg" alt="" />
+      </section>
+
     
       <section className="py-32">
         <div className="container mx-auto px-8 lg:px-16">
@@ -118,19 +130,25 @@ export default function Home() {
           </div>
 
           
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="group cursor-pointer">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900 mb-4 group-hover:scale-105 transition-transform">
-                  <div className="w-full h-full flex items-center justify-center text-zinc-600">
-                    <span className="text-xs">Product {item}</span>
-                  </div>
-                </div>
-                <h4 className="text-sm font-light text-zinc-400">Chair Model {item}</h4>
-                <p className="text-lg font-medium mt-1">$2,499</p>
+          
+
+        <div className="container mx-auto px-8 lg:px-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {galleryImages.map((image, index) => (
+              <div 
+                key={index} 
+                className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-orange-900/30 to-zinc-900 hover:scale-105 transition-transform cursor-pointer"
+              >
+                <img 
+                  src={image}
+                  alt={`Chair ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
+        </div>
+
         </div>
       </section>
 
@@ -160,34 +178,18 @@ export default function Home() {
         </div>
       </section>
 
-     
-      <section className="py-32">
-        <div className="container mx-auto px-8 lg:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div 
-                key={item} 
-                className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-orange-900/30 to-zinc-900 hover:scale-105 transition-transform cursor-pointer"
-              >
-                <div className="w-full h-full flex items-center justify-center text-zinc-600">
-                  <span className="text-xs">Gallery {item}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <section className = "items-center justify-center flex py-20 shrink-0">
+        <img src="/Frame 90 (1).svg" alt="" />
       </section>
 
-     
       <section className="py-20 bg-zinc-950">
         <div className="container mx-auto px-8 lg:px-16">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-stone-200 to-stone-300">
-                <div className="w-full h-full flex items-center justify-center text-stone-600">
+              <div className="aspect-[3/4] rounded-3xl overflow-hidden ">
+                <div className="w-full h-full flex items-center justify-center">
                   <div className="text-center">
-                    <p className="text-sm mb-2">Customer Photo</p>
-                    <p className="text-xs opacity-50">Replace with testimonial image</p>
+                    <img src="/Frame 87.svg" alt="" />
                   </div>
                 </div>
               </div>
@@ -195,7 +197,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="space-y-4">
                   <p className="text-xl font-light text-zinc-300 leading-relaxed italic">
-                    "The quality and craftsmanship of my SitCity chair exceeded all expectations. It's not just furniture—it's a work of art."
+                    "The quality and craftsmanship of my SitCity chair exceeded all expectations. It's not just furniture. it's a work of art."
                   </p>
                   <div className="flex items-center gap-3 pt-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-zinc-700 to-zinc-800"></div>
